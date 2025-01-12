@@ -11,10 +11,8 @@ import type EmailProp from "../Props/email";
 // Define any props the component might accept (currently none)
 
 // Define the Login component using React.FC (Function Component)
-const Login: React.FC<EmailProp> = (emailProp : EmailProp  ) => {
-  
- 
-  const email = emailProp.inputEmail;  
+const Login: React.FC<EmailProp> = (emailProp: EmailProp) => {
+  const email = emailProp.inputEmail;
   const setEmail = emailProp.setInputEmail;
 
   const [password, setPassword] = useState("");
@@ -41,49 +39,51 @@ const Login: React.FC<EmailProp> = (emailProp : EmailProp  ) => {
   };
 
   return (
-    <div className="container">
-      <form onSubmit={handleSubmit}>
-        <h1>Acesse o Sistema</h1>
-        <div className="input-field">
-          <input
-            type="email"
-            placeholder="E-Mail"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setEmail(e.target.value);
-            }}
-          />
-          <FaUser className="icon"></FaUser>
-        </div>
-        <div className="input-field">
-          <input
-            value={password}
-            type="password"
-            placeholder="Senha"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setPassword(e.target.value)
-            }
-            required
-          />
-          <FaLock className="icon"></FaLock>
-        </div>
+    <div className="mainLoginContainer">
+      <div className="container">
+        <form onSubmit={handleSubmit}>
+          <h1>Acesse o Sistema</h1>
+          <div className="input-field">
+            <input
+              type="email"
+              placeholder="E-Mail"
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                setEmail(e.target.value);
+              }}
+            />
+            <FaUser className="icon"></FaUser>
+          </div>
+          <div className="input-field">
+            <input
+              value={password}
+              type="password"
+              placeholder="Senha"
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setPassword(e.target.value)
+              }
+              required
+            />
+            <FaLock className="icon"></FaLock>
+          </div>
 
-        <div className="recall-forget">
-          <label>
-            <input type="checkbox" />
-            Lembre de mim
-          </label>
+          <div className="recall-forget">
+            <label>
+              <input type="checkbox" />
+              Lembre de mim
+            </label>
 
-          <Link to="/Forgot">Esqueceu a senha?</Link>
-        </div>
-        <button>Entrar</button>
+            <Link to="/Forgot">Esqueceu a senha?</Link>
+          </div>
+          <button>Entrar</button>
 
-        <div className="signup-link">
-          <p>
-            Não tem conta? <Link to="/Register">Cadastrar</Link>
-          </p>
-        </div>
-      </form>
-    </div>
+          <div className="signup-link">
+            <p>
+              Não tem conta? <Link to="/Register">Cadastrar</Link>
+            </p>
+          </div>
+        </form>
+      </div>
+     </div>
   );
 };
 

@@ -1,0 +1,35 @@
+.mainHomeContainer {
+
+  border-style: dotted;
+  min-height: 100vh;
+}
+
+.navigation {}
+
+ul {
+  display: flex;
+  background-color: lightblue;
+  flex-direction: row;
+  flex-direction: row-reverse;
+  /* justify-content: space-between; */
+  align-content: flex-start;
+  
+
+  /* position: static; */
+  margin-right: auto;
+  background-color: rgb(157, 135, 135);
+  padding: 5px;
+
+}
+
+li {
+  text-align: end;
+  padding: 7px;
+  list-style: none;
+
+}
+
+.link-style {
+  text-decoration: none;
+
+}

@@ -9,11 +9,14 @@
 
 
 .App {
-    display:flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
+    border-style: dashed;
+    flex-direction: column; */
     min-height: 100vh;
     background-image: url("assets/imagem.webp");
     background-size: cover;
     background-position: center;
+    
 }

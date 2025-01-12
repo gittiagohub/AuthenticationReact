@@ -12,9 +12,24 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login inputEmail ={email} setInputEmail={setEmail}></Login>}></Route>
-          <Route path="/Register" element={<Register inputEmail ={email} setInputEmail={setEmail} ></Register>}></Route>
-          <Route path="/Forgot" element={<Forgot inputEmail ={email} setInputEmail={setEmail}></Forgot>}></Route>
+          <Route
+            path="/"
+            element={
+              <Login inputEmail={email} setInputEmail={setEmail}></Login>
+            }
+          ></Route>
+          <Route
+            path="/Register"
+            element={
+              <Register inputEmail={email} setInputEmail={setEmail}></Register>
+            }
+          ></Route>
+          <Route
+            path="/Forgot"
+            element={
+              <Forgot inputEmail={email} setInputEmail={setEmail}></Forgot>
+            }
+          ></Route>
           <Route path="/Homepage" element={<HomePage></HomePage>}></Route>
           {/* <Route path="/Forgot" element={<Forgot></Forgot>}></Route> */}
         </Routes>
